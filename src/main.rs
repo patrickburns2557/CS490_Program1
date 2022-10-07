@@ -1,8 +1,25 @@
 fn main() {
-    let mut s1 = String::from("hello");
+    let money = String::from("money is great");
 
-    let r1 = &s1;
-    let r2 = &s1;
+    let first = first_word(&money);
 
-    println!("{}, {}", r1, r2);
+    println!("First word of \"{}\" = \"{}\"", money, first);
+
+    let s2 = String::from("hello world");
+    let hello = &s2[0..5];
+    let world = &s2[6..11];
+
+    println!("\"{}\" \"{}\"", hello, world);
+}
+
+fn first_word(s: &String) -> &str {
+    let bytes = s.as_bytes();
+
+    for (i, &item) in bytes.iter().enumerate() {
+        if item == b' ' {
+            return &s[0..i];
+        }
+    }
+
+    &s[..]
 }
