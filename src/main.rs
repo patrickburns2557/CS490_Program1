@@ -8,6 +8,8 @@ the number the user specifies, and store them
 in a queue to print them out in order of creation,
 and store them in binary heap to print out in
 order of priority 
+
+Written using VSCode on Windows
 **********************************/
 
 /* Use declarations */
